@@ -1,7 +1,10 @@
 package com.chatapp.threadripper;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,6 +22,42 @@ public class BaseActivity extends AppCompatActivity {
     ImageView btnImgBack;
 
     boolean doubleBackToExitPressedOnce = false;
+
+    // WifiP2pManager mManager;
+    // Channel mChannel;
+    // BroadcastReceiver mReceiver;
+
+    // IntentFilter mIntentFilter;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+
+        // mManager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
+        // mChannel = mManager.initialize(this, getMainLooper(), null);
+        // mReceiver = new WiFiDirectBroadcastReceiver(mManager, mChannel, this);
+        //
+        // mIntentFilter = new IntentFilter();
+        // mIntentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
+        // mIntentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
+        // mIntentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
+        // mIntentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+    }
+
+
+    // /* register the broadcast receiver with the intent values to be matched */
+    // @Override
+    // protected void onResume() {
+    //     super.onResume();
+    //     registerReceiver(mReceiver, mIntentFilter);
+    // }
+    //
+    // /* unregister the broadcast receiver */
+    // @Override
+    // protected void onPause() {
+    //     super.onPause();
+    //     unregisterReceiver(mReceiver);
+    // }
 
 
     public final void changeTitle(int toolbarId, String titlePage) {
