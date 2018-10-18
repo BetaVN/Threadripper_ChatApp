@@ -47,6 +47,8 @@ public class VideoCallActivity extends BaseMainActivity {
         initViews();
 
         setListener();
+
+        startActivity(new Intent(this, TestVideoActivity.class));
     }
 
     void initViews() {
